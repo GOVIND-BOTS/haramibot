@@ -12,7 +12,7 @@ API_ID = int(getenv("API_ID", "27424332"))
 API_HASH = getenv("API_HASH", "cb93e76ed8e78c8081f52cd3aa66f08b")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "6268640520:AAF8YfhXa1hMgQbe9FvwtBoxmyCrrfj1S90")
+BOT_TOKEN = getenv("BOT_TOKEN", "6002510085:AAHzJmkn9NoStpFtSHrz15fj6jIOPBPiHjI")
 
 # Database to save your chats and stats... Get MongoDB:-  
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://hnyx:wywyw2@cluster0.9dxlslv.mongodb.net/?retryWrites=true&w=majority")
@@ -31,7 +31,7 @@ SONG_DOWNLOAD_DURATION = int(
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001652662001"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "pallu music")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "music")
 
 # Your User ID.
 OWNER_ID = list(
