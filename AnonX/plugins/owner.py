@@ -54,7 +54,7 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/df3246d81ef013346d280.jpg",
+        photo=f"https://te.legra.ph/file/a58f2d16aff24bc55f342.jpg",
         caption=f"""🦋•────────────────•🦋 \n          🇸𝗧𝗨𝗗𝗬  𝙉𝘿 𝘾𝙍𝙔😭
 🦋•────────────────•🦋
 ┏━━━•◦●◉✿ ❟❛❟ ✿◉●◦•━━━━┓
@@ -67,7 +67,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "sumit", url=f"https://t.me/SK_X_Y")
+                        "sumit", url=f"https://t.me/Natkhat_pari")
                 ]
             ]
         ),
@@ -79,7 +79,7 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/40f6128e4820b94264870.jpg",
+        photo=f"https://te.legra.ph/file/772a01342b9a4a09629ce.jpg",
         caption=f"""🦋•────────────────•🦋 \n          🇸𝗧𝗨𝗗𝗬  𝙉𝘿 𝘾𝙍𝙔😭
 🦋•────────────────•🦋
 ┏━━━•◦●◉✿ ❟❛❟ ✿◉●◦•━━━━┓
