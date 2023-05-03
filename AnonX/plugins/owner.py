@@ -23,7 +23,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 GOVIND 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP42")
+                        "🌹 𝐎𝐖𝐍𝐄𝐑 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP42")
                 ]
             ]
         ),
@@ -41,7 +41,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 GOVIND 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP42")
+                        "🌹 【🇬𝐎𝐕𝐈𝐍𝐃 𒆜 🇻𝐀𝐑𝐌𝐀】 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP42")
                 ]
             ]
         ),
