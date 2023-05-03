@@ -49,12 +49,12 @@ async def help(client: Client, message: Message):
 
 
 @app.on_message(
-    filters.command("GOVIND")
+    filters.command("pari")
     & filters.group
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/a58f2d16aff24bc55f342.jpg",
+        photo=f"",
         caption=f"""🦋•────────────────•🦋 \n          🇸𝗧𝗨𝗗𝗬  𝙉𝘿 𝘾𝙍𝙔😭
 🦋•────────────────•🦋
 ┏━━━•◦●◉✿ ❟❛❟ ✿◉●◦•━━━━┓
@@ -67,7 +67,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "sumit", url=f"https://t.me/Natkhat_pari")
+                        "pari", url=f"https://t.me/Natkhat_pari")
                 ]
             ]
         ),
