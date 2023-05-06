@@ -141,13 +141,13 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.private & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/df3246d81ef013346d280.jpg",
+        photo=f"https://te.legra.ph/file/4d781bd97587c449c5d6c.mp4",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://github.com/GOVIND-BOTS/haramibot")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://te.legra.ph/file/4d781bd97587c449c5d6c.mp4")
                 ]
             ]
         ),
