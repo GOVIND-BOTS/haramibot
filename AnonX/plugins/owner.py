@@ -118,7 +118,7 @@ async def help(client: Client, message: Message):
     )
 
 @app.on_message(
-    filters.command("source")
+    filters.command("repo")
     & filters.group
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
@@ -129,7 +129,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://github.com/GOVIND-BOTS/haramibot")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://telegra.ph//file/2af6eb42ca2a28828e37a.mp4")
                 ]
             ]
         ),
