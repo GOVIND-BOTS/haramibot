@@ -136,7 +136,7 @@ async def help(client: Client, message: Message):
     )
 
 @app.on_message(
-    filters.command("repo")
+    filters.command("carry")
     & filters.private
     & ~filters.edited & filters.private & ~filters.edited)
 async def help(client: Client, message: Message):
