@@ -213,4 +213,4 @@ async def cancel_spam(client, message):
             spam_chats.remove(message.chat.id)
         except:
             pass
-        return await message.reply("♦ Mention process stopped ♦")
+        return await message.reply("♦ band😐q kiya🙂year ♦")
