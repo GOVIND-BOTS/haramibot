@@ -135,7 +135,9 @@ TAGMES = [ " **𝐇𝐞𝐲 𝐁𝐚𝐛𝐲 𝐊𝐚𝐡𝐚 𝐇𝐨🥱** ",
            " **𝐌𝐲 𝐂𝐮𝐭𝐞 𝐎𝐰𝐧𝐞𝐫 [ @GOVIND_OFFICIAL_MP42 ]🥰** ",
            " **𝐊𝐚𝐡𝐚 𝐊𝐡𝐨𝐲𝐞 𝐇𝐨 𝐉𝐚𝐚𝐧😜** ",
            " **𝐆𝐨𝐨𝐝 𝐍8 𝐉𝐢 𝐁𝐡𝐮𝐭 𝐑𝐚𝐭 𝐇𝐨 𝐠𝐲𝐢🥰** ",
-           ]
+           " **isme 😍 aajao jasmine😘** ",
+           " **mere owner [ @GOVIND_OFFICIAL_MP42 ]😍** ",
+          ]
 
 @app.on_message(filters.command(["tagall", "all", "tagmember"], prefixes=["/", "@", "#"]))
 async def mentionall(client, message):
