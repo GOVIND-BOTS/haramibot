@@ -129,7 +129,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://telegra.ph//file/2af6eb42ca2a28828e37a.mp4")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://github.com/GOVIND-BOTS/haramibot")
                 ]
             ]
         ),
