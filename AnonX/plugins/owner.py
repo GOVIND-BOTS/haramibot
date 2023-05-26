@@ -17,31 +17,31 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/df3246d81ef013346d280.jpg",
+        photo=f"https://te.legra.ph/file/5f67a045257c21444274c.jpg",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐃𝐌❤️𝐎𝐖𝐍𝐄𝐑🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 𝐎𝐖𝐍𝐄𝐑 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP42")
+                        "🌹 𝗢𝗪𝗡𝗘𝗥 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP42")
                 ]
             ]
         ),
     )
 
 @app.on_message(
-    filters.command("owner")
+    filters.command("sherni")
     & filters.private
     & ~filters.edited & filters.private & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/df3246d81ef013346d280.jpg",
-        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐃𝐌❤️𝐎𝐖𝐍𝐄𝐑🍁""",
+        photo=f"https://te.legra.ph/file/ee479580df4caa50cac50.jpg",
+        caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐃𝐌❤️𝗦𝗛𝗘𝗥𝗡𝗜🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 【🇬𝐎𝐕𝐈𝐍𝐃 𒆜 🇻𝐀𝐑𝐌𝐀】 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP42")
+                        "🌹 𝗦𝗛𝗘𝗥𝗡𝗜 🌹", url=f"https://t.me/MISS_STRANGE_OFFICIAL")
                 ]
             ]
         ),
