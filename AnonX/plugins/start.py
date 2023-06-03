@@ -10,11 +10,11 @@ import config
 from config import BANNED_USERS
 from config import OWNER_ID
 from strings import get_command, get_string
-from AnonX import Telegram, YouTube, app
-from AnonX.misc import SUDOERS, _boot_
-from AnonX.plugins.playlist import del_plist_msg
-from AnonX.plugins.sudoers import sudoers_list
-from AnonX.utils.database import (add_served_chat,
+from VipX import Telegram, YouTube, app
+from VipX.misc import SUDOERS, _boot_
+from VipX.plugins.playlist import del_plist_msg
+from VipX.plugins.sudoers import sudoers_list
+from VipX.utils.database import (add_served_chat,
                                        add_served_user,
                                        get_served_chats,
                                        get_served_users,
@@ -22,9 +22,9 @@ from AnonX.utils.database import (add_served_chat,
                                        get_assistant, get_lang,
                                        get_userss, is_on_off,
                                        is_served_private_chat)
-from AnonX.utils.decorators.language import LanguageStart
-from AnonX.utils.formatters import get_readable_time
-from AnonX.utils.inline import (help_pannel, private_panel,
+from VipX.utils.decorators.language import LanguageStart
+from VipX.utils.formatters import get_readable_time
+from VipX.utils.inline import (help_pannel, private_panel,
                                      start_pannel)
 
 loop = asyncio.get_running_loop()
@@ -52,7 +52,7 @@ async def start_comm(client, message: Message, _):
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
             m = await message.reply_text(
-                f"🥱 ɢᴇᴛᴛɪɴɢ ʏᴏᴜʀ ᴩᴇʀsᴏɴᴀʟ sᴛᴀᴛs ғʀᴏᴍ {config.MUSIC_BOT_NAME} sᴇʀᴠᴇʀ."
+                f"🥱 𝐆𝐞𝐭𝐭𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐏𝐞𝐫𝐬𝐨𝐧𝐚𝐥 𝐒𝐭𝐚𝐭𝐬 𝐅𝐫𝐨𝐦 {config.MUSIC_BOT_NAME} sᴇʀᴠᴇʀ."
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -112,7 +112,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>sᴜᴅᴏʟɪsᴛ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention} 𝐉𝐮𝐬𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐓𝐡𝐞 𝐕𝐢𝐩 𝐁𝐨𝐭 𝐓𝐨 𝐂𝐡𝐞𝐜𝐤 𝐒𝐨𝐧𝐠 𝐈𝐧𝐟𝐨 <code>𝐒𝐮𝐝𝐨𝐥𝐢𝐬𝐭</code>\n\n**𝐔𝐒𝐄𝐑 𝐈𝐃:-** {sender_id}\n**𝐍𝐀𝐌𝐄:-** {sender_name}",
                 )
             return
         if name[0:3] == "lyr":
@@ -123,7 +123,7 @@ async def start_comm(client, message: Message, _):
                 return await Telegram.send_split_text(message, lyrics)
             else:
                 return await message.reply_text(
-                    "ғᴀɪʟᴇᴅ ᴛᴏ ɢᴇᴛ ʟʏʀɪᴄs."
+                    "𝐅𝐚𝐢𝐥𝐞𝐝 𝐓𝐨 𝐆𝐞𝐭 𝐋𝐲𝐫𝐢𝐜𝐬🥺 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐏𝐥𝐞𝐚𝐬𝐞🥀."
                 )
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
@@ -138,7 +138,7 @@ async def start_comm(client, message: Message, _):
                 )
             return
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎")
+            m = await message.reply_text("🥀𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐮𝐡....")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -154,26 +154,33 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-😲**ᴛʀᴀᴄᴋ ɪɴғᴏʀɴᴀᴛɪᴏɴ**😲
+ㅤㅤ**🔔 ❰ 𝐒ᴏɴɢ🎙𝐈ɴғᴏʀᴍᴀᴛɪᴏɴ ❱ 🔔**
+        
+★•.¸¸♡¸¸.•*¨*•☆•*♫*•.¸¸♡¸¸.•*☆*•.¸¸♡¸¸.•★
+● 🎸 **𝐍𝐚𝐦𝐞 ➪ [{title}]({link})**　　
+★ 　° :. ★　 ♫ • ○ ° ★ ☆ . * ● ¸ .✦ .✮
+● 💽 **𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧 ➪ [{duration} ᴍɪɴ.]({link})**☆¸¸♡¸¸★
+★ 　° :. ★　 ♫ • ○ ° ★ ☆ . * ● ¸ .✦ .❊
+● 🕹 **𝐕𝐢𝐞𝐰𝐬 ➪ [{views}]({link})**.♫.☆ ¸¸♡¸¸ ✭
+•✰˚♫. * ● ¸ .★ .¸¸♡¸¸★ :●. ♫°☆ ¸. ● .. ✫
+● ⏰ **𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐎𝐧 ➪ [{published}]({link})**. ✰
+° °☆ 　¸. ● . .¸¸♡¸¸.★　★✰˚♫. ○  ✦ .✵
+● 📺 **𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ➪ [{channel}]({link})**★
+•✰˚♫. * ● ¸ . ★ .¸¸♡¸¸★ :●. *°☆ ¸. ● .. ✧
+● 🗯 **𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐋𝐢𝐧𝐤 ➪ [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})**✰
+•✰˚♫. * ● ¸ . ★ .¸¸♡¸¸★ :●. *°☆ ¸. ● .. ★
+● 📡 **𝐋𝐢𝐧𝐤 ➪ [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})**☆.♡
+•✰˚♫. * ● ¸ . ★ .¸¸♡¸¸★ :●. *°☆ ¸. ● .. ✷
 
-📌 **ᴛɪᴛʟᴇ:** {title}
-
-⏳ **ᴅᴜʀᴀᴛɪᴏɴ:** {duration} ᴍɪɴᴜᴛᴇs
-👀 **ᴠɪᴇᴡs:** `{views}`
-⏰ **ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ:** {published}
-🎥 **ᴄʜᴀɴɴᴇʟ:** {channel}
-📎 **ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
-🔗 **ʟɪɴᴋ:** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
-
-💖 sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {config.MUSIC_BOT_NAME}"""
+☆✫᯾✰✰✰✰✰𝙱𝚈 » [𝐆𝐎𝐕𝐈𝐍𝐃](https://t.me/GOVIND_OFFICIAL_MP42)✰✰✰✵✯✰✰☆"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="• ʏᴏᴜᴛᴜʙᴇ •", url=f"{link}"
+                            text="❤️‍🩹𝐘𝐎𝐔𝐓𝐔𝐁𝐄❤️‍🩹", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="• sᴜᴩᴩᴏʀᴛ •", url="https://t.me/indian_chatting_club_offical"
+                            text="🖤𝐒𝐔𝐏𝐏𝐎𝐑𝐓🖤", url="https://t.me/indian_chatting_club_offical"
                         ),
                     ],
                 ]
@@ -191,7 +198,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                    f"{message.from_user.mention} 𝐉𝐮𝐬𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐁𝐨𝐭 𝐓𝐨 𝐂𝐡𝐞𝐜𝐤<code>𝐒𝐨𝐧𝐠 𝐈𝐧𝐟𝐨</code>\n\n**𝐔𝐬𝐞𝐫 𝐈𝐝:-** {sender_id}\n**𝐍𝐚𝐦𝐞:-** {sender_name}",
                 )
     else:
         try:
@@ -202,7 +209,6 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_sticker("CAACAgEAAxkBAAEIS2FkHfJQpbvRTfhyfS67BxulycCtegAC-gADUSkNORIJSVEUKRrhLwQ")
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
@@ -225,7 +231,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
+                f"{message.from_user.mention} 𝐉𝐮𝐬𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐕𝐢𝐩 𝐁𝐨𝐭😍.\n\n**𝐔𝐬𝐞𝐫 𝐈𝐝:-** {sender_id}\n**𝐍𝐚𝐦𝐞:-** {sender_name}",
             )
 
 
@@ -257,7 +263,7 @@ async def welcome(client, message: Message):
     if config.PRIVATE_BOT_MODE == str(True):
         if not await is_served_private_chat(message.chat.id):
             await message.reply_text(
-                "**ᴩʀɪᴠᴀᴛᴇ ᴍᴜsɪᴄ ʙᴏᴛ**\n\nᴏɴʟʏ ғᴏʀ ᴛʜᴇ ᴄʜᴀᴛs ᴀᴜᴛʜᴏʀɪsᴇᴅ ʙʏ ᴍʏ ᴏᴡɴᴇʀ, ʀᴇǫᴜᴇsᴛ ɪɴ ᴍʏ ᴏᴡɴᴇʀ's ᴩᴍ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ᴀɴᴅ ɪғ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛᴏ ᴅᴏ sᴏ ᴛʜᴇɴ ғᴜ*ᴋ ᴏғғ ʙᴇᴄᴀᴜsᴇ ɪ'ᴍ ʟᴇᴀᴠɪɴɢ."
+                "**𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝑮𝑶𝑽𝑰𝑵𝑫 𝑴𝑼𝑺𝑰𝑪 𝐁𝐨𝐭**\n\n𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐓𝐡𝐞 𝐂𝐡𝐚𝐭𝐬 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐁𝐲 𝐌𝐲 𝐎𝐰𝐧𝐞𝐫, 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐈𝐧 𝐌𝐲 𝐎𝐰𝐧𝐞𝐫'𝐬 𝐏𝐦 𝐓𝐨 𝐀𝐥𝐥𝐨𝐰 𝐘𝐨𝐮𝐫 𝐂𝐡𝐚𝐭 𝐀𝐧𝐝 𝐈𝐟 𝐘𝐨𝐮 𝐃𝐨𝐧𝐭 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐃𝐨 𝐓𝐡𝐞𝐧 𝐌𝐚𝐚 𝐂𝐡𝐮𝐝𝐚𝐨👿 𝐛𝐜𝐨𝐳 𝐈'𝐦 𝐋𝐞𝐚𝐯𝐢𝐧𝐠..."
             )
             return await app.leave_chat(message.chat.id)
     else:
@@ -305,3 +311,8 @@ async def welcome(client, message: Message):
             return
         except:
             return
+               
+
+
+
+            
