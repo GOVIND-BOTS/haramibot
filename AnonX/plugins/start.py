@@ -10,11 +10,11 @@ import config
 from config import BANNED_USERS
 from config import OWNER_ID
 from strings import get_command, get_string
-from VipX import Telegram, YouTube, app
-from VipX.misc import SUDOERS, _boot_
-from VipX.plugins.playlist import del_plist_msg
-from VipX.plugins.sudoers import sudoers_list
-from VipX.utils.database import (add_served_chat,
+from anonx import Telegram, YouTube, app
+from anonx.misc import SUDOERS, _boot_
+from anonx.plugins.playlist import del_plist_msg
+from anonx.plugins.sudoers import sudoers_list
+from anonx.utils.database import (add_served_chat,
                                        add_served_user,
                                        get_served_chats,
                                        get_served_users,
@@ -22,9 +22,9 @@ from VipX.utils.database import (add_served_chat,
                                        get_assistant, get_lang,
                                        get_userss, is_on_off,
                                        is_served_private_chat)
-from VipX.utils.decorators.language import LanguageStart
-from VipX.utils.formatters import get_readable_time
-from VipX.utils.inline import (help_pannel, private_panel,
+from anonx.utils.decorators.language import LanguageStart
+from anonx.utils.formatters import get_readable_time
+from anonx.utils.inline import (help_pannel, private_panel,
                                      start_pannel)
 
 loop = asyncio.get_running_loop()
