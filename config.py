@@ -35,7 +35,7 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "music")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "5348648456").split())
+    map(int, getenv("OWNER_ID", "6264449143").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -56,10 +56,10 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/zd_yz_music_spport"
-)  # Example:- https://t.me/zd_yz_music_spport
+    "SUPPORT_CHANNEL", "https://t.me/arning_with_govind"
+)  # Example:- https://t.me/arning_with_govind
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/Digital_word_chating"
+    "SUPPORT_GROUP", "https://t.me/Friends_Ki_Duniya_love"
 )  # Example:- https://t.me/Digital_word_chating
 SUPPORT_HEHE = SUPPORT_GROUP
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
