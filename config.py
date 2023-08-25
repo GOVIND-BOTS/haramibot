@@ -59,7 +59,7 @@ SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/arning_with_govind"
 )  # Example:- https://t.me/arning_with_govind
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/Friends_Ki_Duniya_love"
+    "SUPPORT_GROUP", "https://t.me/govind_misic_logger"
 )  # Example:- https://t.me/Digital_word_chating
 SUPPORT_HEHE = SUPPORT_GROUP
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
