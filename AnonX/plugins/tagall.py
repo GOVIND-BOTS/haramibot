@@ -126,17 +126,17 @@ TAGMES = [ " **𝐇𝐞𝐲 𝐁𝐚𝐛𝐲 𝐊𝐚𝐡𝐚 𝐇𝐨🥱** ",
            " **𝐀𝐚𝐨 𝐏𝐚𝐫𝐭𝐲 𝐊𝐚𝐫𝐭𝐞 𝐇𝐚𝐢𝐧😋🥳** ",
            " **𝐇𝐞𝐦𝐥𝐨𝐨🧐** ",
            " **𝐌𝐮𝐣𝐡𝐞 𝐁𝐡𝐮𝐥 𝐆𝐲𝐞 𝐊𝐲𝐚🥺** ",
-           " **𝐘𝐚𝐡𝐚 𝐀𝐚 𝐉𝐚𝐨:- [ @Friends_Ki_Duniya_love ] 𝐌𝐚𝐬𝐭𝐢 𝐊𝐚𝐫𝐞𝐧𝐠𝐞 🤭🤭** ",
+           " **𝐘𝐚𝐡𝐚 𝐀𝐚 𝐉𝐚𝐨:- [ @GOVIND_MP_USERBOT_SPPORT ] 𝐌𝐚𝐬𝐭𝐢 𝐊𝐚𝐫𝐞𝐧𝐠𝐞 🤭🤭** ",
            " **𝐓𝐫𝐮𝐭𝐡 𝐀𝐧𝐝 𝐃𝐚𝐫𝐞 𝐊𝐡𝐞𝐥𝐨𝐠𝐞..? 😊** ",
            " **𝐀𝐚𝐣 𝐌𝐮𝐦𝐦𝐲 𝐍𝐞 𝐃𝐚𝐭𝐚 𝐘𝐫🥺🥺** ",
-           " **𝐉𝐨𝐢𝐧 𝐊𝐚𝐫 𝐋𝐨:- [ @arning_with_govind ] 🤗** ",
+           " **𝐉𝐨𝐢𝐧 𝐊𝐚𝐫 𝐋𝐨:- [ @GOVIND_USERBOT_UPDATE ] 🤗** ",
            " **𝐄𝐤 𝐃𝐢𝐥 𝐇𝐚𝐢 𝐄𝐤 𝐃𝐢𝐥 𝐇𝐢 𝐓𝐨 𝐇𝐚𝐢😗😗** ",
            " **𝐓𝐮𝐦𝐡𝐚𝐫𝐞 𝐃𝐨𝐬𝐭 𝐊𝐚𝐡𝐚 𝐆𝐲𝐞🥺** ",
-           " **𝐌𝐲 𝐂𝐮𝐭𝐞 𝐎𝐰𝐧𝐞𝐫 [ @GOVIND_OFFICIAL_MP9 ]🥰** ",
+           " **𝐌𝐲 𝐂𝐮𝐭𝐞 𝐎𝐰𝐧𝐞𝐫 [ @GOVIND_OFFICIAL_MP0 ]🥰** ",
            " **𝐊𝐚𝐡𝐚 𝐊𝐡𝐨𝐲𝐞 𝐇𝐨 𝐉𝐚𝐚𝐧😜** ",
            " **𝐆𝐨𝐨𝐝 𝐍8 𝐉𝐢 𝐁𝐡𝐮𝐭 𝐑𝐚𝐭 𝐇𝐨 𝐠𝐲𝐢🥰** ",
            " **isme 😍 𝗮𝗮𝗷𝗮𝗼 𝗷𝗮𝗻𝘂😘** ",
-           " **𝗺𝗲𝗿𝗲 𝗼𝘄𝗻𝗲𝗿 [ @GOVIND_OFFICIAL_MP9 ]😍** ",
+           " **𝗺𝗲𝗿𝗲 𝗼𝘄𝗻𝗲𝗿 [ @GOVIND_OFFICIAL_MP0 ]😍** ",
            " **😂𝗶𝘀𝗸𝗼𝘀𝗲𝘁 𝗸𝗮𝗿𝗹𝗼 😂😂** ",
           ]
 
@@ -166,9 +166,9 @@ async def mentionall(client, message):
         mode = "text_on_reply"
         msg = message.reply_to_message
         if not msg:
-            return await message.reply("/tagall hii 👈 Try this or reply any message...")
+            return await message.reply("/tagall hemlo baby 😎😂 👈 Try this or reply any message...")
     else:
-        return await message.reply("/tagall hii 👈 Try this or reply any message...")
+        return await message.reply("/tagall hello darling 😁 👈 Try this or reply any message...")
 
     spam_chats.append(chat_id)
     usrnum = 0
@@ -214,4 +214,4 @@ async def cancel_spam(client, message):
             spam_chats.remove(message.chat.id)
         except:
             pass
-        return await message.reply("♦ band😐q kiya🙂year ♦")
+        return await message.reply("♦ band😐q kiya🙂yaar ♦")
