@@ -1,7 +1,7 @@
 {
     "name": "🌹⃝𖣔GOVIND.MUSIC🥀⛦⃕‌🇮🇳",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/3a131483d8a27dbf41b3a.jpg",
+    "logo": "https://te.legra.ph/file/f838cb9569f21b13a33d5.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -34,16 +34,16 @@
       },
       "MUSIC_BOT_NAME": {
         "description": "𝐀 𝐍𝐀𝐌𝐄 𝐅𝐎𝐑 𝐘𝐎𝐔𝐑 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓. 𝐀𝐋𝐖𝐀𝐘𝐒 𝐖𝐑𝐈𝐓𝐄 𝐈𝐍 𝐒𝐈𝐌𝐏𝐋𝐄 𝐋𝐄𝐓𝐓𝐄𝐑",
-        "value": "TG X MUSIC",
+        "value": "GOVIND X MUSIC",
         "required": true
       },
       "OWNER_ID": {
         "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐎𝐖𝐍𝐄𝐑 𝐈𝐃, 𝐔 𝐂𝐀𝐍 𝐔𝐒𝐄 𝐌𝐎𝐑𝐄 𝐏𝐄𝐑𝐒𝐎𝐍 𝐈𝐃 𝐁𝐘 𝐆𝐈𝐕𝐄𝐈𝐍𝐆 𝐒𝐏𝐀𝐂𝐄 𝐀𝐅𝐓𝐄𝐑 𝐎𝐍𝐄 𝐈𝐃.",
-        "value": "1808943146",
+        "value": "6540170882",
         "required": true
       },
       "STRING_SESSION": {
-        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐀 𝐒𝐈𝐌𝐏𝐋𝐄 𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍, 𝐈𝐅 𝐄𝐑𝐑𝐎𝐑 𝐓𝐇𝐄𝐍 𝐒𝐄𝐍𝐃 𝐄𝐑𝐑𝐎𝐑 𝐒𝐒 𝐓𝐎 𝐑𝐄𝐏𝐎 𝐎𝐖𝐍𝐄𝐑.( 𝐆𝐄𝐓 𝐅𝐑𝐎𝐌 = t.me/VIP_STRING_ROBOT ) . ",
+        "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐀 𝐒𝐈𝐌𝐏𝐋𝐄 𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 𝐒𝐓𝐑𝐈𝐍𝐆 𝐒𝐄𝐒𝐒𝐈𝐎𝐍, 𝐈𝐅 𝐄𝐑𝐑𝐎𝐑 𝐓𝐇𝐄𝐍 𝐒𝐄𝐍𝐃 𝐄𝐑𝐑𝐎𝐑 𝐒𝐒 𝐓𝐎 𝐑𝐄𝐏𝐎 𝐎𝐖𝐍𝐄𝐑.( 𝐆𝐄𝐓 𝐅𝐑𝐎𝐌 = t.me/GOVIND_STRING_ROBOT ) . ",
         "value": "",
         "required": true
       },
@@ -59,7 +59,7 @@
       },
       "START_IMG_URL": {
         "description": "𝐅𝐈𝐋𝐋 𝐇𝐄𝐑𝐄 𝐘𝐎𝐔𝐑 𝐒𝐓𝐀𝐑𝐓 𝐁𝐎𝐓 𝐈𝐌𝐀𝐆𝐄 𝐔𝐑𝐋, 𝐆𝐄𝐓 𝐈𝐓 𝐅𝐑𝐎𝐌 ;- t.me/vTelegraphBot",
-        "value": "https://te.legra.ph/file/ecdeac045f4045c198bd6.jpg",
+        "value": "https://te.legra.ph/file/2484a6d30efd3f5104ede.jpg",
         "required": false
       },
       "LOG_GROUP_ID": {
