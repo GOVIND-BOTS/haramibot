@@ -66,9 +66,9 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/govind_music_spport"),
+                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/GOVIND_MP_USERBOT_SPPORT"),
                     InlineKeyboardButton(
-                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/govind_music_office")
+                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/GOVIND_USERBOT_UPDATE")
                     
                 ]
             ]
@@ -86,9 +86,9 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/govind_music_spport"),
+                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/GOVIND_MP_USERBOT_SPPORT"),
                     InlineKeyboardButton(
-                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/govind_music_office")
+                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/GOVIND_USERBOT_UPDATE")
                     
                 ]
             ]
