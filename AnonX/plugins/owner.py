@@ -23,7 +23,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 𝗢𝗪𝗡𝗘𝗥 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP9")
+                        "🌹 𝗢𝗪𝗡𝗘𝗥 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP0")
                 ]
             ]
         ),
@@ -92,7 +92,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "sumit", url=f"https://t.me/SK_X_Y")
+                        "govind", url=f"https://t.me/GOVIND_OFFICIAL_MP0")
                 ]
             ]
         ),
