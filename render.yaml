@@ -1,11 +1,11 @@
 services:
   - type: web
     plan: free
-    name: Zaid
+    name: govind
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: python3 server.py & python3 -m Zaid
-    repo: https://github.com/ITZ-ZAID/ZAID-USERBOT      
+    startCommand: python3 server.py & python3 -bash start
+    repo: https://github.com/GOVIND-BOTS/haramibot      
     branch: master
     envVars:
       - key: SUDO_USERS 
@@ -17,5 +17,15 @@ services:
       - key: STRING_SESSION1
         sync: false
       - key: MONGO_URL
-        sync: false    
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+      - sync: false
+      - key: LOG_GROUP_ID
+      - sync: false
+      - key: START_IMAGE
+      - sync: false
+      - key: MUSIC_BOT_NAME
+      - sync: false
     autoDeploy: false
