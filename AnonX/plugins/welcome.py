@@ -3,7 +3,7 @@ from pyrogram import Client
 from pyrogram.types import Message
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from Anonx import app  
+from AnonX import app  
 
 photo = [
     "https://telegra.ph/file/1b819cfbcb2a2d3c738f6.jpg",
