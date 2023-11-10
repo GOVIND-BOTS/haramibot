@@ -45,7 +45,7 @@ RAID_STR = [
 que = {}
 
 
-@AnonX_handler()
+@app.on_message_handler()
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -60,7 +60,7 @@ async def _(event):
             reply_to=event.message.id,
         )
 
-@AnonX_cmd(pattern="loveraid(?:\s|$)([\s\S]*)")
+@app.on_message_cmd(pattern="loveraid(?:\s|$)([\s\S]*)")
 async def _(event):
     global que
     if event.fwd_from:
@@ -91,7 +91,7 @@ async def _(event):
         await event.edit(f"love has been activated on {username}")
 
 
-@AnonX_cmd(pattern="dlove(?:\s|$)([\s\S]*)")
+@app.on_message_cmd(pattern="dlove(?:\s|$)([\s\S]*)")
 async def _(event):
     global que
     if event.fwd_from:
