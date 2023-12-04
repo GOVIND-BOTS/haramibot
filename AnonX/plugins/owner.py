@@ -23,14 +23,14 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 𝗢𝗪𝗡𝗘𝗥 🌹", url=f"https://t.me/GOVIND_OFFICIAL_MP0")
+                        "🌹 𝗢𝗪𝗡𝗘𝗥 🌹", url=f"https://t.me/govind_official_mpp")
                 ]
             ]
         ),
     )
 
 @app.on_message(
-    filters.command("sherni")
+    filters.command("arya")
     & filters.private
     & ~filters.edited & filters.private & ~filters.edited)
 async def help(client: Client, message: Message):
@@ -41,7 +41,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 𝗦𝗛𝗘𝗥𝗡𝗜 🌹", url=f"https://t.me/MISS_STRANGE_OFFICIAL")
+                        "🌹😍😍🌹", url=f"https://t.me/BADGIRL_OFFICIAl_143")
                 ]
             ]
         ),
@@ -49,12 +49,12 @@ async def help(client: Client, message: Message):
 
 
 @app.on_message(
-    filters.command("pari")
+    filters.command("Vaibhav")
     & filters.group
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/a58f2d16aff24bc55f342.jpg",
+        photo=f"",
         caption=f"""🦋•────────────────•🦋 \n          🇸𝗧𝗨𝗗𝗬  𝙉𝘿 𝘾𝙍𝙔😭
 🦋•────────────────•🦋
 ┏━━━•◦●◉✿ ❟❛❟ ✿◉●◦•━━━━┓
@@ -67,7 +67,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "pari", url=f"https://t.me/Natkhat_pari")
+                        "pari", url=f"https://t.me/King_of_fwf")
                 ]
             ]
         ),
