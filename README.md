@@ -7,7 +7,7 @@
 
 <p align="center">
     <b>ᴠɪsɪᴛᴏʀs</b><br>
- -->    <img align="middle" src="https://profile-counter.glitch.me/GOVIND-BOTS/count.svg" />
+ -->    <img align="middle" src="https://telegra.ph/file/cf32c167593d92f5aa896.jpg" />
 </p>
 
 
@@ -22,7 +22,7 @@
 </h2>
 
 <p align="center">
-  <img src="https://te.legra.ph/file/2484a6d30efd3f5104ede.jpg">
+  <img src="https://telegra.ph/file/cf32c167593d92f5aa896.jpg">
 </p>
 
 **𝙏𝙀𝙎𝙏 𝘽𝙊𝙏 ➣ [𝄟ॐ❥𝗜𝗖𝗖🍷𝗠𝗨𝗦𝗜𝗖❥𝄟⃟🥀](https://t.me/Govind_143_bot)**
