@@ -4,7 +4,7 @@ from AnonX import app, userbot
 from AnonX.misc import SUDOERS
 from pyrogram import * 
 from pyrogram.types import *
-from AnonX.utils.AnonX_ban import admin_filter
+from AnonX.utils.daxx_ban import admin_filter
 
 
 
