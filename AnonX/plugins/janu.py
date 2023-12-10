@@ -1,4 +1,4 @@
-1import requests
+import requests
 import random
 from AnonX import app, userbot
 from AnonX.misc import SUDOERS
