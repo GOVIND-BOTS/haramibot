@@ -54,7 +54,7 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"",
+        photo=f"https://te.legra.ph/file/3f85f4efe4fc9138559fd.jpg",
         caption=f"""🦋•────────────────•🦋 \n          🇸𝗧𝗨𝗗𝗬  𝙉𝘿 𝘾𝙍𝙔😭
 🦋•────────────────•🦋
 ┏━━━•◦●◉✿ ❟❛❟ ✿◉●◦•━━━━┓
@@ -74,12 +74,12 @@ async def help(client: Client, message: Message):
     )
 
 @app.on_message(
-    filters.command("sumit")
+    filters.command("jaan")
     & filters.group
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/772a01342b9a4a09629ce.jpg",
+        photo=f"https://te.legra.ph/file/1fe352711a9f121a47368.jpg",
         caption=f"""🦋•────────────────•🦋 \n          🇸𝗧𝗨𝗗𝗬  𝙉𝘿 𝘾𝙍𝙔😭
 🦋•────────────────•🦋
 ┏━━━•◦●◉✿ ❟❛❟ ✿◉●◦•━━━━┓
@@ -92,7 +92,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "govind", url=f"https://t.me/GOVIND_OFFICIAL_MP0")
+                        "govind", url=f"https://t.me/Ring_finger01")
                 ]
             ]
         ),
