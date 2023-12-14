@@ -15,7 +15,7 @@ from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityV
                                                   LowQualityVideo, MediumQualityVideo)
 
 from AnonX.core.call import Anon
-from config import SUDO_USERS
+from AnonX.utils import seconds_to_min, time_to_seconds
 
 logging.basicConfig(level=logging.INFO)
 
