@@ -14,7 +14,7 @@ from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityVideo,
                                                   LowQualityVideo, MediumQualityVideo)
 
-from AnonX.main import call_py, bot as AnonX, Test
+from AnonX.core.call import Anon
 from config import SUDO_USERS
 
 logging.basicConfig(level=logging.INFO)
