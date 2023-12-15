@@ -13,7 +13,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityVideo,
                                                   LowQualityVideo, MediumQualityVideo)
-
+from AnonX import app
 from AnonX.core.call import Anon
 from AnonX.utils import seconds_to_min, time_to_seconds
 
