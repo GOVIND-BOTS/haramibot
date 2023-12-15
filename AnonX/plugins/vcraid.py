@@ -34,7 +34,7 @@ aud_list = [
 
 
 
-@Flame.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
+@app.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
 async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
@@ -60,7 +60,7 @@ async def vcraid(_, e: Message):
             await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
 
 
-@Flame.on_message(filters.user(SUDO_USERS) & filters.command(["vraid"], prefixes=HNDLR))
+@app.on_message(filters.user(SUDO_USERS) & filters.command(["vraid"], prefixes=HNDLR))
 async def vraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
@@ -88,7 +88,7 @@ async def vraid(_, e: Message):
             await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Video:** {songname} \n**> Position:** Ongoing Raid")
 
 
-@Flame.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
+@app.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
@@ -109,7 +109,7 @@ async def ping(_, e: Message):
         await e.reply_text("**No ongoing raid!**")
 
 
-@Flame.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], prefixes=HNDLR))
+@app.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
@@ -130,7 +130,7 @@ async def ping(_, e: Message):
         await e.reply_text("**No ongoing raid!**")
 
 
-@Flame.on_message(filters.user(SUDO_USERS) & filters.command(["raidresume"], prefixes=HNDLR))
+@app.on_message(filters.user(SUDO_USERS) & filters.command(["raidresume"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
