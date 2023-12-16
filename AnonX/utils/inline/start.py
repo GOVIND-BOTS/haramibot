@@ -9,7 +9,7 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="☆ 𝐀𝐝𝐝 𝐌𝐞 𝐌𝐨𝐢 𝐋𝐮𝐯 ☆",
+                text="☆ 𝗸𝗶𝗱𝗻𝗮𝗽 𝐌𝐞 𝐌𝐨𝐢 𝐋𝐮𝐯 ☆",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ],
@@ -30,7 +30,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="☆ 𝐀𝐝𝐝 𝐌𝐞 𝐌𝐨𝐢 𝐋𝐮𝐯 ☆",
+                text="☆ 𝗸𝗶𝗱𝗻𝗮𝗽 𝗺𝗲 𝗺𝗼𝗶 𝗹𝗼𝗯 ☆",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ],
@@ -47,13 +47,13 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 text="🍒𝐆𝐫𝐨𝐮𝐩🍒", url=config.SUPPORT_GROUP
             ),
             InlineKeyboardButton(
-                text="🏠𝐎𝐟𝐟𝐢𝐜𝐞🏠", url=f"https://t.me/VIP_CREATORS",
+                text="🙃𝐋𝐨𝐯𝐞 𝐟𝐢𝐥𝐥𝐢𝐧𝐠", url=f"https://t.me/online_love_fillings",
             )
         ],
         [
             InlineKeyboardButton(
-                text="🌱ƨσʋяcɛ🌱",
-                url=f"https://github.com/THE-VIP-BOY-OP/VIP-MUSIC",
+                text="🌱𝗣𝗢𝗥𝗘🌱",
+                url=f"https://github.com/GOVIND-BOTS/haramibot",
             )
         ],
      ]
