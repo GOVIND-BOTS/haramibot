@@ -11,7 +11,7 @@ from AnonX.core.call import Anon
 from AnonX.utils import bot_sys_stats
 from AnonX.utils.decorators.language import language
 from AnonX.utils.inline.play import close_keyboard
-from AnonX.utils.inline.start import BOT_USERNAME
+from AnonX.utils.inline.start import BOT_USERNAME,OWNER:Union
 ### Commands
 PING_COMMAND = get_command("PING_COMMAND")
 
