@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from typing import Union
 from pyrogram import filters
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -11,7 +11,7 @@ from AnonX.core.call import Anon
 from AnonX.utils import bot_sys_stats
 from AnonX.utils.decorators.language import language
 from AnonX.utils.inline.play import close_keyboard
-from AnonX.utils.inline.start import BOT_USERNAME,OWNER:Union
+from AnonX.utils.inline.start import def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
 ### Commands
 PING_COMMAND = get_command("PING_COMMAND")
 
