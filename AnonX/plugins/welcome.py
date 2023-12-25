@@ -3,8 +3,8 @@ import random
 from ..logging import LOGGER
 from AnonX.misc import SUDOERS
 from pyrogram import Client 
-from pyrogram.types import *
-from AnonX.utils.database import admin_filter
+from pyrogram.types import get_string
+from config import adminlist
 
 
 
