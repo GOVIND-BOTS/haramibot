@@ -3,7 +3,7 @@ import random
 from ..logging import LOGGER
 from AnonX.misc import SUDOERS
 from pyrogram import Client 
-from pyrogram.types import Anon
+from pyrogram.types import message
 from config import adminlist
 
 
