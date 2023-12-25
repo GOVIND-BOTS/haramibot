@@ -1,46 +1,141 @@
+import requests
 import random
-from pyrogram import Client
-from pyrogram.types import Message
-from pyrogram import filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from AnonX import app  
+from ..logging import LOGGER
+from AnonX.misc import SUDOERS
+from pyrogram import Client 
+from pyrogram.types import *
+from AnonX.utils.database import admin_filter
 
-photo = [
-    "https://telegra.ph/file/1b819cfbcb2a2d3c738f6.jpg",
-    "https://telegra.ph/file/3021c823c7f006658682f.jpg",
-    "https://telegra.ph/file/05561f0fbf323e057ab87.jpg",
-    "https://telegra.ph/file/7a6b51ee0077724254ca7.jpg",
-    "https://telegra.ph/file/b3de9e03e5c8737ca897f.jpg",
-    "https://telegra.ph/file/0b6bb91986ef3a143033b.jpg",
-    "https://telegra.ph/file/2b5b66c9a0989afa0779a.jpg",
-    "https://telegra.ph/file/471339bb1901a007c0c2f.jpg",
-    "https://telegra.ph/file/ab7d958d707ef649bc3c3.jpg",
-    "https://telegra.ph/file/4f877f2843f31fcc32242.jpg",
-    "https://telegra.ph/file/ecefaa3e00fb911826673.jpg",
-    "https://telegra.ph/file/2a10683a2166f7cf4940b.jpg",
-    "https://telegra.ph/file/cda35ca740e1229626e48.jpg",
-    "https://telegra.ph/file/9f7186cd3d87199426e03.jpg",
-    "https://telegra.ph/file/7fe39f1baa1a93b9a3f0e.jpg",
-    
+
+
+
+
+
+priya_text = [
+"hey please don't disturb me.",
+"who are you",    
+"aap kon ho",
+"aap mere owner to nhi lgte ",
+"hey tum mera name kyu le rhe ho meko sone do",
+"ha bolo kya kaam hai ",
+"dekho abhi mai busy hu ",
+"hey i am busy",
+"aapko smj nhi aata kya ",
+"leave me alone",
+"dude what happend",    
+]
+
+strict_txt = [
+"i can't restrict against my besties",
+"are you serious i am not restrict to my friends",
+"fuck you bsdk k mai apne dosto ko kyu kru",
+"hey stupid admin ", 
+"ha ye phele krlo maar lo ek dusre ki gwaand",  
+"i can't hi is my closest friend",
+"i love him please don't restict this user try to usertand "
 ]
 
 
-@app.on_message(filters.new_chat_members, group=3)
-async def join_watcher(_, message):    
-    chat = message.chat
-    
-    for members in message.new_chat_members:
-        
-            count = await app.get_chat_members_count(chat.id)
+ 
+ban = ["ban","boom"]
+unban = ["unban",]
+mute = ["mute","silent","shut"]
+unmute = ["unmute","speak","free"]
+kick = ["kick", "out","nikaal","nikal"]
+promote = ["promote","adminship"]
+demote = ["demote","lelo"]
+group = ["group"]
+channel = ["channel"]
 
-            msg = (
-                f"**😇𝐡𝐞𝐲 {message.from_user.mention} 𝚠𝚎𝚕𝚌𝚘𝚖𝚎 𝚒𝚗 𝚊 𝚗𝚎𝚠 𝚐𝚛𝚘𝚞𝚙🥳**\n\n"
-                f"**📝𝗀𝗋𝗈𝗎𝗈 𝗇𝖺𝗆𝖾:** {message.chat.title}\n➖➖➖➖➖➖➖➖➖➖➖\n"
-                f"**🔐𝗰𝗵𝗮𝘁 𝘂𝘀𝗲𝗿𝗻𝗮𝗺𝗲:** @{message.chat.username}\n➖➖➖➖➖➖➖➖➖➖➖\n"
-                f"**💖𝗨𝗥 𝗜𝗗:** {message.from_user.id}\n➖➖➖➖➖➖➖➖➖➖➖\n"
-                f"**✍️𝗨𝗥 𝘂𝘀𝗲𝗿𝗻𝗮𝗺𝗲:** @{message.from_user.username}\n➖➖➖➖➖➖➖➖➖➖➖\n"
-                f"**👥𝘁𝗼𝘁𝗲𝗹 {count} 𝗺𝗲𝗿𝗯𝗲𝗿𝘀🎉**"
-            )
-            await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"🥳𝐤𝐢𝐝𝐧𝐚𝐩 𝐦𝐞🥳", url=f"https://t.me/{app.username}?startgroup=true")]
-         ]))
+
+
+# ========================================= #
+
+
+@app.on_message(filters.command(["govi","annu"], prefixes=["y", "Y"]) & admin_filter)
+async def restriction_app(app :app, message):
+    reply = message.reply_to_message
+    chat_id = message.chat.id
+    if len(message.text) < 2:
+        return await message.reply(random.choice(Yumikoo_text))
+    bruh = message.text.split(maxsplit=1)[1]
+    data = bruh.split(" ")
+    
+    if reply:
+        user_id = reply.from_user.id
+        for banned in data:
+            print(f"present {banned}")
+            if banned in ban:
+                if user_id in SUDOERS:
+                    await message.reply(random.choice(strict_txt))          
+                else:
+                    await app.ban_chat_member(chat_id, user_id)
+                    await message.reply("OK, Ban kar diya madrchod ko sala Chutiya tha !")
+                    
+        for unbanned in data:
+            print(f"present {unbanned}")
+            if unbanned in unban:
+                await app.unban_chat_member(chat_id, user_id)
+                await message.reply(f"Ok, aap bolte hai to unban kar diya") 
+                
+        for kicked in data:
+            print(f"present {kicked}")
+            if kicked in kick:
+                if user_id in SUDOERS:
+                    await message.reply(random.choice(strict_txt))
+                
+                else:
+                    await app.ban_chat_member(chat_id, user_id)
+                    await app.unban_chat_member(chat_id, user_id)
+                    await message.reply("get lost! bhga diya bhosdi wale ko") 
+                    
+        for muted in data:
+            print(f"present {muted}") 
+            if muted in mute:
+                if user_id in SUDOERS:
+                    await message.reply(random.choice(strict_txt))
+                
+                else:
+                    permissions = ChatPermissions(can_send_messages=False)
+                    await message.chat.restrict_member(user_id, permissions)
+                    await message.reply(f"muted successfully! Disgusting people.") 
+                    
+        for unmuted in data:
+            print(f"present {unmuted}")            
+            if unmuted in unmute:
+                permissions = ChatPermissions(can_send_messages=True)
+                await message.chat.restrict_member(user_id, permissions)
+                await message.reply(f"Huh, OK, sir!")   
+
+
+        for promoted in data:
+            print(f"present {promoted}")            
+            if promoted in promote:
+                await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
+                    can_change_info=False,
+                    can_invite_users=True,
+                    can_delete_messages=True,
+                    can_restrict_members=False,
+                    can_pin_messages=True,
+                    can_promote_members=False,
+                    can_manage_chat=True,
+                    can_manage_video_chats=True,
+                       )
+                     )
+                await message.reply("promoted !")
+
+        for demoted in data:
+            print(f"present {demoted}")            
+            if demoted in demote:
+                await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
+                    can_change_info=False,
+                    can_invite_users=False,
+                    can_delete_messages=False,
+                    can_restrict_members=False,
+                    can_pin_messages=False,
+                    can_promote_members=False,
+                    can_manage_chat=False,
+                    can_manage_video_chats=False,
+                       )
+                     )
+                await message.reply("demoted !")
