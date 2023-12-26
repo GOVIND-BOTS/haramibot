@@ -52,7 +52,7 @@ channel = ["channel"]
 # ========================================= #
 
 
-@app.on_message(filters.command(["govi","annu"], prefixes=["g", "a"]) & admin_filter)
+@app.on_message(filters.command("ANNU_COMMAND") & admin_filter) @language
 async def restriction_app(app :app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
