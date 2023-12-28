@@ -1,5 +1,5 @@
 from pyrogram.types import Message
-from pyrogram.enums import ChatType, ChatMemberStatus
+from pyrogram.idle import ChatType, ChatMemberStatus
 
 
 async def admin_check(message: Message) -> bool:
