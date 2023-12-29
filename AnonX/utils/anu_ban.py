@@ -1,5 +1,5 @@
 from pyrogram import filters
-from AnonX.utils.admin_check import admin_check
+from AnonX.utils.admin_check import LOGGER
 
 
 USE_AS_BOT = True
