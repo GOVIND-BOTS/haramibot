@@ -1,5 +1,8 @@
 from pyrogram.types import Message
-from pyrogram. import cilent
+from config import adminlist
+from strings import get_string
+from AnonX import app
+from AnonX.misc import SUDOERS
 
 
 async def admin_check(message: Message) -> bool:
