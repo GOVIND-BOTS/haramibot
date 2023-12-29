@@ -1,5 +1,7 @@
-from pyrogram import filters
-from AnonX.utils.admin_check import LOGGER
+from config import adminlist
+from strings import get_string
+from AnonX import app
+
 
 
 USE_AS_BOT = True
