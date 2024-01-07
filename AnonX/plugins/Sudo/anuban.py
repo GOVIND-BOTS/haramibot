@@ -11,7 +11,7 @@ from AnonX.utils.anu_ban import admin_filter
 
 
 
-anu_text = [
+govind_text = [
 "hey please don't disturb me.",
 "who are you",    
 "aap kon ho",
@@ -52,7 +52,7 @@ channel = ["channel"]
 # ========================================= #
 
 
-@app.on_message(filters.command(["umi","anu"], prefixes=["y", "Y"]) & admin_filter)
+@app.on_message(filters.command(["ga","vind"], prefixes=["g", "G"]) & admin_filter)
 async def restriction_app(app :app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
