@@ -2,7 +2,7 @@ import requests
 import random
 from AnonX import app, userbot
 from AnonX.misc import SUDOERS
-from pyrogram import * 
+from pyrogram import Client
 from pyrogram.types import *
 from AnonX.utils.anu_ban import admin_filter
 
