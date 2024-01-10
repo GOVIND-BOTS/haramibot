@@ -52,12 +52,12 @@ channel = ["channel"]
 # ========================================= #
 
 
-@app.on_message(filters.command(["ga","vind"], prefixes=["g", "G"]) & admin_filter)
+@app.on_message(pyrogram.filters.command(["go","vind"], prefixes=["g", "d"]) & admin_filter)
 async def restriction_app(app :app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
     if len(message.text) < 2:
-        return await message.reply(random.choice(anu_text))
+        return await message.reply(random.choice(govind_text))
     bruh = message.text.split(maxsplit=1)[1]
     data = bruh.split(" ")
     
