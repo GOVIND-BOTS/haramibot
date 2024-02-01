@@ -23,4 +23,4 @@ numpy
 https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
 youtube-search
 youtube-search-python
-pip install pyrogram
+pip3 install pyrogram
