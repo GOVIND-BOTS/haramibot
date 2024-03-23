@@ -1,13 +1,15 @@
 aiofiles
 aiohttp
 asyncio
+beautifulsoup4
 dnspython
 ffmpeg-python
 gitpython
 hachoir
 heroku3
 lyricsgenius
-motor==3.0.0
+motor
+numpy
 pillow
 psutil
 py-tgcalls==0.9.7
@@ -19,8 +21,7 @@ requests
 speedtest-cli
 spotipy
 tgcrypto
-numpy
-https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
+unidecode
+yt-dlp==2023.12.30
 youtube-search
 youtube-search-python
-pip3 install pyrogram
