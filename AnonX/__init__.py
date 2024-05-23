@@ -6,25 +6,17 @@ from AnonX.misc import dbb, heroku, sudo
 from aiohttp import ClientSession
 
 from .logging import LOGGER
-
+from .platforms import YouTubeAPI, CarbonAPI, SpotifyAPI, AppleAPI, RessoAPI, SoundAPI, TeleAPI
 
 dirr()
-
 git()
-
 dbb()
-
 heroku()
-
 sudo()
 
 # Clients
 app = AnonXBot()
-
 userbot = Userbot()
-
-
-from .platforms import *
 
 YouTube = YouTubeAPI()
 Carbon = CarbonAPI()
