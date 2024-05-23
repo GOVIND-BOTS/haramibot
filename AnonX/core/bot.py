@@ -1,5 +1,5 @@
 import sys
-from pyrogram import Client
+from pyrogram import Client, errors
 import config
 from ..logging import LOGGER
 
@@ -34,7 +34,7 @@ class AnonXBot(Client):
                     config.LOG_GROUP_ID,
                     f"**» {config.MUSIC_BOT_NAME} 𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐛𝐚𝐛𝐲🤩 **\n\n✨ 𝐈𝐃 : `{self.id}`\n🥰𝐍𝐀𝐌𝐄 : {self.name}\n💫 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 : @{self.username}"
                 )
-            except Exception as e:
+            except errors.Forbidden as e:
                 self.logger.error(
                     f"Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin! Error: {e}"
                 )
@@ -44,6 +44,10 @@ class AnonXBot(Client):
             self.logger.error(f"An error occurred during bot start: {e}")
             await self.stop()
             sys.exit()
+
+    async def run(self):
+        await self.start()
+        await idle()  # Wait until interrupt signal
 
 if __name__ == "__main__":
     bot = AnonXBot()
