@@ -3,12 +3,11 @@ import asyncio
 from datetime import datetime, timedelta
 from typing import Union
 
-from pyrogram import Client
-from pyrogram.errors import (ChatAdminRequired, UserAlreadyParticipant, UserNotParticipant)
+from pyrogram import Client, errors
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pytgcalls import PyTgCalls, StreamType
-from pytgcalls.exceptions import (AlreadyJoinedError, NoActiveGroupCall, TelegramServerError)
-from pytgcalls.types import (JoinedGroupCallParticipant, LeftGroupCallParticipant, Update)
+from pytgcalls.exceptions import AlreadyJoinedError, NoActiveGroupCall, TelegramServerError
+from pytgcalls.types import JoinedGroupCallParticipant, LeftGroupCallParticipant, Update
 from pytgcalls.types.input_stream import AudioImagePiped, AudioPiped, AudioVideoPiped
 from pytgcalls.types.stream import StreamAudioEnded
 
@@ -16,9 +15,12 @@ import config
 from strings import get_string
 from AnonX import LOGGER, YouTube, app
 from AnonX.misc import db
-from AnonX.utils.database import (add_active_chat, add_active_video_chat, get_assistant, get_audio_bitrate, get_lang, get_loop, get_video_bitrate, group_assistant, is_autoend, music_on, set_loop, remove_active_chat, remove_active_video_chat)
+from AnonX.utils.database import (
+    add_active_chat, add_active_video_chat, get_assistant, get_audio_bitrate, get_lang, get_loop, get_video_bitrate,
+    group_assistant, is_autoend, music_on, set_loop, remove_active_chat, remove_active_video_chat
+)
 from AnonX.utils.exceptions import AssistantErr
-from AnonX.utils.inline.play import (stream_markup, telegram_markup)
+from AnonX.utils.inline.play import stream_markup, telegram_markup
 from AnonX.utils.stream.autoclear import auto_clean
 from AnonX.utils.thumbnails import gen_thumb
 
@@ -33,48 +35,48 @@ async def _clear_(chat_id):
     await remove_active_chat(chat_id)
 
 
-class Call(PyTgCalls):
+class Call:
     def __init__(self):
         self.userbot1 = Client(
+            name=str(config.STRING1),
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING1),
         )
         self.one = PyTgCalls(
             self.userbot1,
             cache_duration=100,
         )
         self.userbot2 = Client(
+            name=str(config.STRING2),
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING2),
         )
         self.two = PyTgCalls(
             self.userbot2,
             cache_duration=100,
         )
         self.userbot3 = Client(
+            name=str(config.STRING3),
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING3),
         )
         self.three = PyTgCalls(
             self.userbot3,
             cache_duration=100,
         )
         self.userbot4 = Client(
+            name=str(config.STRING4),
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING4),
         )
         self.four = PyTgCalls(
             self.userbot4,
             cache_duration=100,
         )
         self.userbot5 = Client(
+            name=str(config.STRING5),
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING5),
         )
         self.five = PyTgCalls(
             self.userbot5,
@@ -180,7 +182,7 @@ class Call(PyTgCalls):
         try:
             try:
                 get = await app.get_chat_member(chat_id, userbot.id)
-            except ChatAdminRequired:
+            except errors.ChatAdminRequired:
                 raise AssistantErr(_["call_1"])
             if get.status == "banned" or get.status == "kicked":
                 try:
@@ -189,12 +191,12 @@ class Call(PyTgCalls):
                     raise AssistantErr(
                         _["call_2"].format(config.MUSIC_BOT_NAME, userbot.id, userbot.mention, userbot.username),
                     )
-        except UserNotParticipant:
+        except errors.UserNotParticipant:
             chat = await app.get_chat(chat_id)
             if chat.username:
                 try:
                     await userbot.join_chat(chat.username)
-                except UserAlreadyParticipant:
+                except errors.UserAlreadyParticipant:
                     pass
                 except Exception as e:
                     raise AssistantErr(_["call_3"].format(e))
@@ -204,7 +206,7 @@ class Call(PyTgCalls):
                         invitelink = chat.invite_link
                         if invitelink is None:
                             invitelink = await app.export_chat_invite_link(chat_id)
-                    except ChatAdminRequired:
+                    except errors.ChatAdminRequired:
                         raise AssistantErr(_["call_4"])
                     except Exception as e:
                         raise AssistantErr(e)
@@ -214,7 +216,7 @@ class Call(PyTgCalls):
                     await asyncio.sleep(1)
                     await userbot.join_chat(invitelink)
                     await m.edit_text(_["call_6"].format(config.MUSIC_BOT_NAME))
-                except UserAlreadyParticipant:
+                except errors.UserAlreadyParticipant:
                     pass
                 except Exception as e:
                     raise AssistantErr(_["call_3"].format(e))
