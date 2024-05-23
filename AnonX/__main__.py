@@ -3,14 +3,14 @@ import importlib
 import sys
 
 from pyrogram import idle
-from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
-from AnonX import LOGGER, app, userbot
+from AnonX import LOGGER, app, userbot, Anon
 from AnonX.core.call import Union
 from AnonX.plugins import ALL_MODULES
 from AnonX.utils.database import get_banned_users, get_gbanned
+from pytgcalls.exceptions import NoActiveGroupCall
 
 loop = asyncio.get_event_loop()
 
@@ -24,7 +24,7 @@ async def init():
         and not config.STRING5
     ):
         LOGGER("AnonX").error(
-            "WTF Baby ! Atleast add a pyrogram string, How Cheap..."
+            "WTF Baby! At least add a Pyrogram string, How Cheap..."
         )
         return
     if (
