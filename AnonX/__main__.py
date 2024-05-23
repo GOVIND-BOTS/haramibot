@@ -8,7 +8,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS
 from AnonX import LOGGER, app, userbot
-from AnonX.core.call import Anon
+from AnonX.core.call import Union
 from AnonX.plugins import ALL_MODULES
 from AnonX.utils.database import get_banned_users, get_gbanned
 
