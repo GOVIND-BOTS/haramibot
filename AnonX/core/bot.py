@@ -2,6 +2,7 @@ import sys
 from pyrogram import Client, errors
 import config
 from ..logging import LOGGER
+from pyrogram import idle
 
 class AnonXBot(Client):
     def __init__(self):
